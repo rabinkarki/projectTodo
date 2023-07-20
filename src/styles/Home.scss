@@ -1,14 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Baloo+Bhai+2&family=Bree+Serif&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;1,100;1,300;1,400&display=swap");
 
 * {
-    margin:0%;
-    padding:0%;
-    font-family:"Roboto",sans-serif;
+    margin: 0%;
+    padding: 0%;
+    font-family: "Roboto", sans-serif;
     box-sizing: border-box;
-    text-decoration:none;
+    text-decoration: none;
     scroll-behavior: smooth;
-    
-
 }
 .container-1 {
     width: 100%;
@@ -23,7 +21,7 @@
         position: sticky;
         color: rgb(155, 148, 148);
 
-        .content {
+        .heading {
             display: flex;
             flex-direction: column;
             align-items: center;
@@ -41,63 +39,46 @@
                 top: 0;
                 left: 0;
             }
-            .heading {
-                > h1 {
-                    color: white;
-                }
-            }
         }
         > .content-2 {
-           
             width: 100%;
-            height:68%;
-            
+            height: 68%;
+
             margin-top: -99px;
-            >.input-1 {
+            > .input-1 {
                 width: 50%;
                 height: 8%;
-                border: 1px solid black;
+               
                 background-color: whitesmoke;
-                margin:auto;
-                margin-top:11px;
-                > label {
-                    font-size: 1.2rem;
-                    height: 25%;
-                    margin-right: 1rem;
-                    input[type="radio"] {
-                    margin-left: 10px;
-                    margin-right: 10px;
-                    }
-            }}
-            >section{
-                display: flex;
-            width: 100%;
-            height: 72%;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            margin-top: 36px;
-            
-            
-             > .input-2 {
+                margin-left: 28%;
+                margin-bottom: 20px;
+                font-size: 1.2rem;
+            }
+            > .input-3 {
                 width: 50%;
-                height: 50%;
-                background-color: white;
-                border: 1px solid seashell;
+                height: 8%;
+                background-color: whitesmoke;
+                margin-left: 28%;
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-                margin-top:-1px;
-                > label {
-                    font-size: 1.2rem;
-                    height: 25%;
-                    
-                    
-                    input[type="radio"] {
-                    margin-left: 10px;
-                    margin-right: 10px;
+                font-size: 1.2rem;
+            }
+            > .input-2 {
+                width: 50%;
+                height: 8%;
+
+                background-color: whitesmoke;
+                margin-left: 28%;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+                font-size: 0.8em;
+                > ul {
+                    display: flex;
+                    justify-content: space-evenly;
+                    list-style: none;
+                    > li {
+                        vertical-align: center;
                     }
                 }
             }
         }
     }
-}
 }
