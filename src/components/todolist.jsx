@@ -1,14 +1,16 @@
 import React from 'react'
+import Todo from './todo'
 
-export const todolist = ({item,on,OF}) => {
+export const todolist = ({todos}) => {
   return (
-    
-        <div className="input-3"   key={item.id}>
+    todos.map(todo => {
+      return (
+        <Todo key={todo.id} todo={todo} checked={todo.checked} />
         
-                  <input type="checkbox" checked={item.checked}  name="create"   />
-                  {item.text}
-                </div>
-    
+      )
+    }
   )
+ 
+    )
 }
 export default todolist;
