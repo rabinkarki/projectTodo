@@ -1,9 +1,10 @@
 import React from 'react'
-import Todo from './todo'
+import Todo from './todo.jsx'
 
-export const todolist = ({todos}) => {
+ const Todolist = ({todoes}) => {
+  console.log(Array.isArray(todoes));
   return (
-    todos.map(todo => {
+    todoes.map(todo => {
       return (
         <Todo key={todo.id} todo={todo} checked={todo.checked} />
         
@@ -13,4 +14,4 @@ export const todolist = ({todos}) => {
  
     )
 }
-export default todolist;
+export default Todolist;

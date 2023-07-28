@@ -15,8 +15,7 @@ function Todo({ todo }) {
         type="checkbox"
         checked={checked}
         name="create"
-        onClick={handleClick}
-        onChange={console.log("changed")}
+        onChange={handleClick}
       />
       {todo.text}
     </div>
