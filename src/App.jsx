@@ -9,7 +9,6 @@ import Todolist from "./components/todolist.jsx";
 import "./styles/Home.scss";
 
 function App() {
-  
   const [display, setDisplay] = useState("all");
   const [active, setActive] = useState([]);
   const [completed, setCompleted] = useState([]);
@@ -18,7 +17,11 @@ function App() {
   const updateTodo = (newMessage) => {
     setTodos(newMessage);
   };
-
+  const updatesTodo = (updatedTodo) => {
+    setTodos((prevTodos) =>
+      prevTodos.map((todo) => (todo.id === updatedTodo.id ? updatedTodo : todo))
+    );
+  };
 
   function allClick() {
     setDisplay("all");
@@ -45,28 +48,26 @@ function App() {
 
   /* Returns display */
   function returnDisplay() {
-    if (display === "all") {
-      return todos;
-    } else if (display === "active") {
-      return active;
-    } else if (display === "completed") {
-      return completed;
-    } else if (display === "clear completed") {
-      return completed;
+    switch (display) {
+      case "active":
+        return active;
+      case "completed":
+        return todos.filter((todo) => todo.checked);
+      default:
+        return todos;
     }
   }
 
   return (
     <>
-    
       <div className="container-1">
         <section className="section">
           <div className="heading">
             <Header />
           </div>
-           <div className="content-2">
-            <Inputs tolist={todos} setTolist={updateTodo}/>
-            <Todolist todoes={returnDisplay()} />
+          <div className="content-2">
+            <Inputs tolist={todos} setTolist={updateTodo} />
+            <Todolist todoes={returnDisplay()} updateTodo={updatesTodo} />
             <Footer
               allClick={allClick}
               activeClick={activeClick}

@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 
 export const Inputs = ({ tolist, setTolist }) => {
@@ -23,10 +22,10 @@ export const Inputs = ({ tolist, setTolist }) => {
 
   return (
     <>
-      <form onSubmit={handleSubmit}>
+      <form onSubmit={handleSubmit} className="input-1">
         <input
           type="text"
-          className="input-1"
+          className="input-1-in"
           name="create"
           value={inputText}
           onChange={handleChange}
