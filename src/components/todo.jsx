@@ -11,8 +11,8 @@ function Todo({ todo, updateTodo }) {
 
   return (
     <div className="input-3">
-      <input type="checkbox" checked={checked} onChange={handleClick} />
-      {todo.text}
+      <input type="checkbox"  checked={checked} onChange={handleClick} />
+      <span>{todo.text}</span>
     </div>
   );
 }
