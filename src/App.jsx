@@ -17,7 +17,7 @@ function App() {
   const updateTodo = (newMessage) => {
     setTodos(newMessage);
   };
-  const updatesTodo = (updatedTodo) => {
+  const checkTodo = (updatedTodo) => {
     setTodos((prevTodos) =>
       prevTodos.map((todo) => (todo.id === updatedTodo.id ? updatedTodo : todo))
     );
@@ -67,7 +67,7 @@ function App() {
           </div>
           <div className="content-2">
             <Inputs tolist={todos} setTolist={updateTodo} />
-            <Todolist todoes={returnDisplay()} updateTodo={updatesTodo} />
+            <Todolist toDisp={returnDisplay()} checkTodo={checkTodo} />
             <Footer
               allClick={allClick}
               activeClick={activeClick}

@@ -1,11 +1,11 @@
 import React, { useState } from "react";
 
-function Todo({ todo, updateTodo }) {
+function Todo({ todo, checkTodo }) {
   const [checked, setChecked] = useState(todo.checked);
 
   function handleClick() {
     const updatedTodo = { ...todo, checked: !checked };
-    updateTodo(updatedTodo);
+    checkTodo(updatedTodo);
     setChecked(!checked);
   }
 

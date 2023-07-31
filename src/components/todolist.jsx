@@ -1,12 +1,12 @@
 import React from 'react'
 import Todo from './todo.jsx'
 import { v4 as uuidv4 } from 'uuid';
- const Todolist = ({todoes,updateTodo}) => {
+ const Todolist = ({toDisp,checkTodo}) => {
    
   return (
-    todoes.map(todo => {
+    toDisp.map(todo => {
       return (
-        <Todo updateTodo={updateTodo}  key={uuidv4()} todo={todo} checked={todo.checked} />
+        <Todo checkTodo={checkTodo}  key={uuidv4()} todo={todo} checked={todo.checked} />
         
       )
     }
