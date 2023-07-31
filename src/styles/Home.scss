@@ -101,3 +101,23 @@
         }
     }
 }
+@media screen and (max-width: 606px) {
+    .container-1 .section > .content-2 {
+        > .input-1 {
+            width: 100%;
+            margin: 10px auto;
+
+            .input-1-in {
+                width: 100%;
+            }
+        }
+        > .input-2 {
+            width: 100%;
+            margin: auto;
+        }
+        > .input-3 {
+            width: 100%;
+            margin: auto;
+        }
+    }
+}
