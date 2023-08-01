@@ -1,11 +1,12 @@
 import React from 'react'
-import Todo from './todo'
-
-export const todolist = ({todos}) => {
+import Todo from './todo.jsx'
+import { v4 as uuidv4 } from 'uuid';
+ const Todolist = ({toDisp,checkTodo}) => {
+   
   return (
-    todos.map(todo => {
+    toDisp.map(todo => {
       return (
-        <Todo key={todo.id} todo={todo} checked={todo.checked} />
+        <Todo checkTodo={checkTodo}  key={uuidv4()} todo={todo} checked={todo.checked} />
         
       )
     }
@@ -13,4 +14,4 @@ export const todolist = ({todos}) => {
  
     )
 }
-export default todolist;
+export default Todolist;
